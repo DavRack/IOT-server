@@ -10,4 +10,4 @@ go get -v
 go build -o iot
 
 # correr el código
-./iot
+sudo ./iot

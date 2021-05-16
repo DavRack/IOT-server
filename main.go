@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	serverPort := 8080
+	serverPort := 80
 	go func() {
 		if err := controller.EchoServer.Start(fmt.Sprintf(":%v", serverPort)); err != nil && err != http.ErrServerClosed {
 			panic("Error fatal")
