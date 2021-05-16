@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# verificar si golang está instalado e instalarlo en caso contrario
+go version > /dev/null || sudo apt install golang -y
+
+# instalar las librerias necesarias para el proyecto
+go get -v
+
+# compilar el código. Ejecutable de nombre "iot"
+go build -o iot
+
+# correr el código
+./iot
