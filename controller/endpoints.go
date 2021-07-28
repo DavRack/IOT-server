@@ -21,6 +21,6 @@ func init() {
 func configAppRoutes() {
 	api := EchoServer.Group(basePath)
 
-	api.GET("/state", GetState)
-	api.POST("/light/:state", SetLightState)
+	api.GET("/device/:deviceId/state", GetState)
+	api.POST("/device/:deviceId/state/:state", SetLightState)
 }
