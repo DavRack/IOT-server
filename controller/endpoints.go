@@ -20,6 +20,7 @@ func init() {
 
 func configAppRoutes() {
 	api := EchoServer.Group(basePath)
+	EchoServer.File("/", "PAE-GUI/index.html")
 
 	api.GET("/device/:deviceId/state", GetState)
 	api.POST("/device/:deviceId/state/:state", SetLightState)
